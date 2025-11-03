@@ -49,8 +49,8 @@
     "nth-check": "^3.0.1"
   },
   "scripts": {
-    "prestart": "echo 'Starting React app...'",
-    "start": "rimraf ./build && set HTTPS=false && react-scripts start",
+    "prestart": "node aspnetcore-https && node aspnetcore-react",
+    "start": "rimraf ./build && react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
